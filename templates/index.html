@@ -1,67 +1,25 @@
-<!DOCTYPE html>
+<html>
+    <body bgcolor=#92a8d1>
 
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Diabetes Predictor</title>
-        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    </head>
+        <center>
 
-    <body style="background-color:powderblue;">
+        <h1> Diabetes Prediction</h1><br>
+        
+        <form method="POST", action="{{url_for('home')}}">
+           <b> Pregnancies:  <input type="text", name='a', placeholder="enter 1"> <br><br>
+            Glucose :  <input type="text", name='b', placeholder="enter 2"> <br><br>
+            BloodPressure :  <input type="text", name='c', placeholder="enter 3"> <br><br>
+            SkinThickness :  <input type="text", name='d', placeholder="enter 4"> <br><br>
+            Insulin :  <input type="text", name='e', placeholder="enter 5"> <br><br>
+            BMI :  <input type="text", name='f', placeholder="enter 6"> <br><br>
+            DiabetesPedigreeFunction :  <input type="text", name='g', placeholder="enter 7"> <br><br>
+            Age : <input type="text", name='h', placeholder="enter 8"> <br><br><br></b>
+            <input type="submit" , value='predict!' >
+        </form>
 
-        <!-- Website Title -->
-    	<div class="container">
-            <h2 class='container-heading'><span class="heading_font">Breast Cancer Predictor</span></h2>
-            <div class='description'>
-    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
-    		</div>
-    	</div>
-
-        <!-- Text Area -->
-    	<div class="ml-container">
-    		<form action="{{ url_for('predict') }}" method="POST">
-            <label for="Pregnancies">Pregnancies: </label>
-            <input type="text" id="Pregnancies" name="Pregnancies">
-            <br>
-            <label for="Glucose">Glucose: </label>
-            <input type="text" id="Glucose" name="Glucose">
-            <br>
-            <label for="BloodPressure">BloodPressure: </label>
-            <input type="text" id="BloodPressure" name="BloodPressure">
-            <br>
-            <label for="SkinThickness">SkinThickness: </label>
-            <input type="text" id="SkinThickness" name="SkinThickness">
-            <br>
-            <label for="Insulin">Insulin: </label>
-            <input type="text" id="Insulin" name="Insulin">
-            <br>
-            <label for="BMI">BMI: </label>
-            <input type="text" id="BMI" name="BMI">
-            <br>
-            <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction: </label>
-            <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction">
-            <br>
-
-            <label for="Age">Age: </label>
-            <input type="text" id="Age" name="Age">
-            <br>
-
-
-
-
-            <br>
-            <br>
-        		<input type="submit" class="my-cta-button" value="Predict">
-    </form>
-    	</div>
-
-        <!-- Footer -->
-       <div class='footer'>
-           <p class='footer-description'>Made by Rakesh.</p>
-       </div>
+        <img src='C:\Users\rakes\Desktop\download.jpg' alt="Machine learning">
+        
+    </center>
 
     </body>
 </html>
